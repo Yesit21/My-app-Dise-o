@@ -1,0 +1,35 @@
+🚀 DESPLIEGUE DE VERCEL - AUTODRIVE
+
+Enlace de producción:
+https://my-app-dise-o-f85a.vercel.app/
+
+---
+
+Información del proyecto:
+- Nombre: My-app-Diseño
+- Plataforma: Vercel
+- Framework: Next.js 16.2.4
+- Estado: Desplegado ✅
+
+---
+
+Características desplegadas:
+✅ Landing page completa de AutoDrive
+✅ Navegación responsive con menú móvil
+✅ Hero section con búsqueda avanzada
+✅ Featured listings (4 autos)
+✅ Sección "Why Choose Us"
+✅ Customer Reviews
+✅ Footer completo
+✅ Animaciones y efectos interactivos
+✅ Toast notifications
+✅ Diseño responsive (móvil, tablet, desktop)
+
+---
+
+Repositorio GitHub:
+https://github.com/Yesit21/My-app-Dise-o.git
+
+---
+
+Fecha de despliegue: Mayo 2026
