@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoDrive - Find Your Perfect Car | Buy & Sell Cars with Confidence</title>
+  <meta name="description" content="AutoDrive is your premium car marketplace. Browse thousands of listings, buy or sell cars with confidence. Find your perfect car today." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-icon">⚡</span>
+        AutoDrive
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active">Home</a></li>
+        <li><a href="#listings" class="nav-link">Buy</a></li>
+        <li><a href="#" class="nav-link">Sell</a></li>
+        <li><a href="#why-us" class="nav-link">About</a></li>
+        <li><a href="#reviews" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-auth">
+        <a href="#" class="btn-login" id="btn-login">Login</a>
+        <a href="#" class="btn-signup" id="btn-signup">Sign Up</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#listings">Buy</a></li>
+      <li><a href="#">Sell</a></li>
+      <li><a href="#why-us">About</a></li>
+      <li><a href="#reviews">Contact</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#" class="btn-signup">Sign Up</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">🏆 #1 Car Marketplace</div>
+        <h1 class="hero-title">Find Your <span class="accent">Perfect</span> Car</h1>
+        <p class="hero-subtitle">Buy &amp; Sell Cars with Confidence</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">50K+</span>
+            <span class="stat-label">Listings</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">12K+</span>
+            <span class="stat-label">Happy Buyers</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">98%</span>
+            <span class="stat-label">Satisfaction</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-car">
+        <div class="car-glow"></div>
+        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80&auto=format" 
+             alt="Luxury BMW sedan" 
+             class="hero-car-img"
+             onerror="this.src='https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80'" />
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <div class="search-bar">
+        <div class="search-field">
+          <label class="search-label">Make</label>
+          <select id="filter-make" class="search-select">
+            <option value="">All Makes</option>
+            <option>BMW</option>
+            <option>Mercedes-Benz</option>
+            <option>Audi</option>
+            <option>Ford</option>
+            <option>Toyota</option>
+            <option>Honda</option>
+            <option>Chevrolet</option>
+            <option>Porsche</option>
+          </select>
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-field">
+          <label class="search-label">Model</label>
+          <select id="filter-model" class="search-select">
+            <option value="">Any Model</option>
+            <option>Sedan</option>
+            <option>SUV</option>
+            <option>Coupe</option>
+            <option>Truck</option>
+            <option>Convertible</option>
+          </select>
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-field">
+          <label class="search-label">Max Price</label>
+          <select id="filter-price" class="search-select">
+            <option value="">Any Price</option>
+            <option>Under $20,000</option>
+            <option>$20,000 - $40,000</option>
+            <option>$40,000 - $60,000</option>
+            <option>$60,000 - $100,000</option>
+            <option>$100,000+</option>
+          </select>
+        </div>
+        <div class="search-divider"></div>
+        <div class="search-field">
+          <label class="search-label">Location</label>
+          <select id="filter-location" class="search-select">
+            <option value="">Select Location</option>
+            <option>New York, NY</option>
+            <option>Los Angeles, CA</option>
+            <option>Chicago, IL</option>
+            <option>Houston, TX</option>
+            <option>Miami, FL</option>
+          </select>
+        </div>
+        <button class="btn-search" id="btn-search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          Search
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED LISTINGS ===== -->
+  <section class="listings" id="listings">
+    <div class="section-container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title dark">Featured Listings</h2>
+          <p class="section-subtitle dark">Handpicked premium vehicles just for you</p>
+        </div>
+      </div>
+      <div class="cars-grid" id="cars-grid">
+
+        <div class="car-card" data-car="bmw">
+          <div class="card-badge">New Arrival</div>
+          <div class="card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?w=400&q=80&auto=format" 
+                 alt="2021 BMW M4" 
+                 class="card-img"
+                 onerror="this.src='https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&q=80'" />
+            <div class="card-overlay">
+              <button class="btn-view" aria-label="Quick view BMW M4">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">2021 BMW M4</h3>
+              <span class="card-price">$63,500</span>
+            </div>
+            <div class="card-details">
+              <span>🏁 450 HP</span>
+              <span>⚙️ Automatic</span>
+              <span>⛽ Gasoline</span>
+            </div>
+            <div class="card-meta">
+              <span>12,400 mi</span>
+              <span class="card-condition certified">Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-car="audi">
+          <div class="card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?w=400&q=80&auto=format" 
+                 alt="2020 Audi Q7" 
+                 class="card-img"
+                 onerror="this.src='https://images.unsplash.com/photo-1540066019607-e5f69323a8dc?w=400&q=80'" />
+            <div class="card-overlay">
+              <button class="btn-view" aria-label="Quick view Audi Q7">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">2020 Audi Q7</h3>
+              <span class="card-price">$45,800</span>
+            </div>
+            <div class="card-details">
+              <span>🏁 335 HP</span>
+              <span>⚙️ Automatic</span>
+              <span>⛽ Diesel</span>
+            </div>
+            <div class="card-meta">
+              <span>28,100 mi</span>
+              <span class="card-condition">Pre-Owned</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-car="mercedes">
+          <div class="card-badge popular">Popular</div>
+          <div class="card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&q=80&auto=format" 
+                 alt="2019 Mercedes S-Class" 
+                 class="card-img"
+                 onerror="this.src='https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=400&q=80'" />
+            <div class="card-overlay">
+              <button class="btn-view" aria-label="Quick view Mercedes S-Class">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">2019 Mercedes S-Class</h3>
+              <span class="card-price">$53,300</span>
+            </div>
+            <div class="card-details">
+              <span>🏁 429 HP</span>
+              <span>⚙️ Automatic</span>
+              <span>⛽ Gasoline</span>
+            </div>
+            <div class="card-meta">
+              <span>19,800 mi</span>
+              <span class="card-condition certified">Certified</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="car-card" data-car="ford">
+          <div class="card-image-wrap">
+            <img src="https://images.unsplash.com/photo-1584345604476-8ec5f452d1f8?w=400&q=80&auto=format" 
+                 alt="2022 Ford Mustang GT" 
+                 class="card-img"
+                 onerror="this.src='https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400&q=80'" />
+            <div class="card-overlay">
+              <button class="btn-view" aria-label="Quick view Ford Mustang GT">Quick View</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">2022 Ford Mustang GT</h3>
+              <span class="card-price">$39,900</span>
+            </div>
+            <div class="card-details">
+              <span>🏁 460 HP</span>
+              <span>⚙️ Manual</span>
+              <span>⛽ Gasoline</span>
+            </div>
+            <div class="card-meta">
+              <span>5,200 mi</span>
+              <span class="card-condition">Pre-Owned</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="listings-cta">
+        <button class="btn-browse" id="btn-browse">
+          Browse All Cars
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ADVANCED FILTERS ===== -->
+  <section class="filters-bar" id="filters">
+    <div class="section-container">
+      <div class="filters-inner">
+        <div class="filters-label">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+          </svg>
+          <span>Advanced Filters</span>
+        </div>
+        <div class="filters-controls">
+          <select id="adv-year" class="filter-select">
+            <option>Year</option>
+            <option>2024</option>
+            <option>2023</option>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+          </select>
+          <select id="adv-mileage" class="filter-select">
+            <option>Mileage</option>
+            <option>Under 10,000</option>
+            <option>10,000 - 30,000</option>
+            <option>30,000 - 60,000</option>
+            <option>60,000 - 100,000</option>
+            <option>100,000+</option>
+          </select>
+          <select id="adv-transmission" class="filter-select">
+            <option>Transmission</option>
+            <option>Automatic</option>
+            <option>Manual</option>
+            <option>CVT</option>
+            <option>Semi-Auto</option>
+          </select>
+          <select id="adv-fuel" class="filter-select">
+            <option>Fuel Type</option>
+            <option>Gasoline</option>
+            <option>Diesel</option>
+            <option>Electric</option>
+            <option>Hybrid</option>
+            <option>Plug-in Hybrid</option>
+          </select>
+          <button class="btn-apply-filters" id="btn-apply">Apply Filters</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE US ===== -->
+  <section class="why-us" id="why-us">
+    <div class="section-container">
+      <div class="section-header centered">
+        <h2 class="section-title light">Why Choose Us?</h2>
+        <p class="section-subtitle light">We make buying and selling cars simple, safe, and transparent</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Trusted Sellers</h3>
+          <p class="feature-text">"I found the perfect car in no time. Excellent service and very trustworthy! Every seller is verified and background checked."</p>
+          <div class="feature-stars">★★★★★</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Easy Financing</h3>
+          <p class="feature-text">"I found the perfect car in no time. Excellent and very trustworthy! Get pre-approved for a loan in minutes with our partner banks."</p>
+          <div class="feature-stars">★★★★★</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">24/7 Support</h3>
+          <p class="feature-text">"Excellent service and very trustworthy! Our dedicated support team is available around the clock to assist with any questions."</p>
+          <div class="feature-stars">★★★★★</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CUSTOMER REVIEWS ===== -->
+  <section class="reviews" id="reviews">
+    <div class="section-container">
+      <div class="section-header centered">
+        <h2 class="section-title dark">Customer Reviews</h2>
+        <p class="section-subtitle dark">What our happy customers say about us</p>
+      </div>
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://i.pravatar.cc/56?img=11" alt="Michael R." class="review-avatar" />
+            <div class="review-info">
+              <h4 class="review-name">Michael R.</h4>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <h5 class="review-title">Great Experience!</h5>
+          <p class="review-text">I found the perfect car in no time. Excellent service and very trustworthy! The whole process from searching to buying was smooth and easy. Highly recommend AutoDrive.</p>
+          <span class="review-date">March 2024</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://i.pravatar.cc/56?img=5" alt="Sarah L." class="review-avatar" />
+            <div class="review-info">
+              <h4 class="review-name">Sarah L.</h4>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <h5 class="review-title">Highly Recommend!</h5>
+          <p class="review-text">Selling my car was quick and easy. Fantastic platform! I listed my vehicle and had it sold within a week. The support team was extremely helpful throughout the process.</p>
+          <span class="review-date">February 2024</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <img src="https://i.pravatar.cc/56?img=15" alt="David K." class="review-avatar" />
+            <div class="review-info">
+              <h4 class="review-name">David K.</h4>
+              <div class="review-stars">★★★★★</div>
+            </div>
+          </div>
+          <h5 class="review-title">Best Platform!</h5>
+          <p class="review-text">Found my dream BMW at an amazing price. The financing options made it very affordable and the certified pre-owned guarantee gave me peace of mind. Will use again!</p>
+          <span class="review-date">January 2024</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GET OUR APP ===== -->
+  <section class="app-section" id="app">
+    <div class="app-bg-glow"></div>
+    <div class="section-container">
+      <div class="app-inner">
+        <div class="app-content">
+          <div class="app-badge">📱 Available Now</div>
+          <h2 class="app-title">Get Our App</h2>
+          <p class="app-subtitle">Buy &amp; Sell Cars On The Go</p>
+          <p class="app-desc">Download Our App for the Best Deals. Get exclusive app-only offers, instant notifications on new listings, and manage your purchases from anywhere.</p>
+          <div class="app-buttons">
+            <a href="#" class="store-btn" id="btn-appstore" aria-label="Download on App Store">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <div>
+                <span class="store-small">Download on the</span>
+                <span class="store-name">App Store</span>
+              </div>
+            </a>
+            <a href="#" class="store-btn" id="btn-playstore" aria-label="Get it on Google Play">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3.18 23.76c.3.17.64.24.99.21L14.69 12 3.18.03C2.83 0 2.49.07 2.19.24 1.6.58 1.25 1.21 1.25 2v19.99c0 .79.35 1.42.94 1.77zM16.35 13.67 5.5 23.36l9.73-5.61 1.12-4.08zM21.5 10.31l-2.74-1.58-2.67 3.27 2.67 3.27 2.76-1.59c.79-.45 1.25-1.21 1.25-2.08 0-.87-.47-1.63-1.27-2.29zM5.5.64l10.85 9.69-1.12-4.08-9.73-5.61z"/>
+              </svg>
+              <div>
+                <span class="store-small">Get it on</span>
+                <span class="store-name">Google Play</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="app-phones">
+          <div class="phone phone-back">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-content">
+                <div class="phone-bar" style="background:#E31E24;height:6px;border-radius:3px;margin-bottom:8px;"></div>
+                <div class="phone-bar" style="background:#222;height:60px;border-radius:6px;margin-bottom:6px;"></div>
+                <div class="phone-bar" style="background:#1a1a1a;height:40px;border-radius:6px;margin-bottom:6px;"></div>
+                <div class="phone-bar" style="background:#1a1a1a;height:40px;border-radius:6px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="phone phone-front">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <div class="phone-content">
+                <div class="phone-bar" style="background:#E31E24;height:8px;border-radius:3px;margin-bottom:10px;"></div>
+                <div class="phone-car-img">🚗</div>
+                <div class="phone-bar" style="background:#222;height:14px;border-radius:3px;margin:8px 0 4px;width:70%;"></div>
+                <div class="phone-bar" style="background:#E31E24;height:28px;border-radius:6px;margin-top:6px;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="section-container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" style="font-size:1.4rem;">⚡ AutoDrive</a>
+          <p>The premier destination for buying and selling quality pre-owned and new vehicles.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook" class="social-btn">f</a>
+            <a href="#" aria-label="Twitter" class="social-btn">𝕏</a>
+            <a href="#" aria-label="Instagram" class="social-btn">📸</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Vehicles</h4>
+          <ul>
+            <li><a href="#">New Cars</a></li>
+            <li><a href="#">Used Cars</a></li>
+            <li><a href="#">Electric</a></li>
+            <li><a href="#">Certified Pre-Owned</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 AutoDrive. All rights reserved. Made with ❤️ for car enthusiasts.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
